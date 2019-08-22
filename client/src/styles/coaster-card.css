@@ -1,0 +1,36 @@
+.coaster-card {
+  order: 1px solid grey;
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgb(255, 254, 254, .11);
+  margin:0px 100px;
+ 
+}
+
+.coaster-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coaster-card h3 {
+  margin-top: 30px;
+  margin-left: 30px;
+  
+}
+
+.coaster-card h4, .coaster-card p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.coaster-card p {
+  font-size: 1.2em;
+  color:rgb(253, 253, 255, .5);
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+
+
+
