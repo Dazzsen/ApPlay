@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-const protectedRoute = ({ component: Component, user, redirectPath, ...rest }) => {
+const GameProtected = ({ component: Component, user, redirectPath, ...rest }) => {
 
     return (
         <Route {...rest} render={props => {
@@ -16,4 +16,4 @@ const protectedRoute = ({ component: Component, user, redirectPath, ...rest }) =
     )
 }
 
-export default protectedRoute;
+export default GameProtected;

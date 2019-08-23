@@ -6,14 +6,14 @@ import AuthServices from './services/auth.services'
 
 
 //RUTAS PROTEGIDAS
-import ProtectedRoute from './components/routes/ProtectedRoute'
+import GameProtected from './components/routes/GameProtected'
 import CrearProtegido from  './components/routes/CrearProtegido'
 
 import NoticeList from './components/Notice-list'
 import NavBar from './components/Navbar'
 import Signup from './components/auth/Signup'
 import Login from './components/auth/Login'
-import Profile from './components/Profile'
+import GameForm from './components/GameForm'
 import Crear from './components/Crear'
 import NoticeDetail from './components/Notice-detail';
 
@@ -53,7 +53,7 @@ class App extends Component {
 
           <Switch>
              <CrearProtegido path='/create' user={this.state.loggedInUser} component={Crear} />
-             <ProtectedRoute path='/profile' user={this.state.loggedInUser} component={Profile} />
+             <GameProtected path='/games' user={this.state.loggedInUser} component={GameForm} />
              <Route path="/notices" exact render={() => <NoticeList userInSession={this.state.loggedInUser} />} />
              <Route path="/notices/:id" exact component={NoticeDetail} />
           </Switch>
@@ -66,7 +66,7 @@ class App extends Component {
 
           <Switch>
             <CrearProtegido path='/create' user={this.state.loggedInUser} component={Crear} />
-            <ProtectedRoute path='/profile' user={this.state.loggedInUser} component={Profile} />
+            <GameProtected path='/games' user={this.state.loggedInUser} component={GameForm} />
             <Route path="/notices" exact render={() => <NoticeList userInSession={this.state.loggedInUser} />} />
             <Route path="/notices/:id" exact component={NoticeDetail} />
             <Route path="/signup" exact render={match => <Signup {...match} setUser={this.setTheUser} />} />

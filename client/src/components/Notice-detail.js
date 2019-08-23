@@ -21,17 +21,18 @@ class NoticeDetail extends Component {
 
     render() {
         return (
-              <div className="container">
-                 <h1>Soy el puto amo!!!</h1>
-                 <div>
-                  <h4> {this.state.notice.plataform} </h4>
+              <div className="container all">
+                  <h1>ApPlay</h1>
+                  <h4>>  {this.state.notice.plataform} </h4>
+                 <div className="encabezado">
                    <h2> {this.state.notice.title}</h2> 
                    <p> Por: {this.state.notice.author} </p>
                  </div>
+
                  <div>
                  <img src={this.state.notice.imageUrl} alt={this.state.notice.title} />
                  </div>
-                 <div>
+                 <div className="review">
                    <p>
                      {this.state.notice.review}
                    </p>

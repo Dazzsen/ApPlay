@@ -52,14 +52,14 @@ console.log(this.state.visible)
                                 <li><Link to="/create">Crear</Link></li>
                             
                                 <li><Link to="/">Inicio</Link></li>
-                                <li><Link to="/profile">Perfil</Link></li>
+                                <li><Link to="/games">Juegos</Link></li>
                                 <li><Link to="/notices">Noticias</Link></li>
                                 <li><div onClick={this.logout}>Cerrar sesión</div></li>
                                 <li><small>Bienvenid@, {saludo}</small></li>
                             </ul> : 
                                 <ul> 
                                 <li><Link to="/">Inicio</Link></li>
-                                <li><Link to="/profile">Perfil</Link></li>
+                                <li><Link to="/games">Juegos</Link></li>
                                 <li><Link to="/notices">Noticias</Link></li>
                                 <li><div onClick={this.logout}>Cerrar sesión</div></li>
                                 <li><small>Bienvenid@, {saludo}</small></li>
@@ -78,7 +78,7 @@ console.log(this.state.visible)
                         <nav>
                             <ul>
                                 <li><Link to="/">Inicio</Link></li>
-                                <li><Link to="/profile">Perfil</Link></li>
+                                <li><Link to="/games">Juegos</Link></li>
                                 <li><Link to="/notices">Noticias</Link></li>
                                 <li><Link to="/signup">Registro</Link></li>
                                 <li><Link to="/login">Inicio de sesión</Link></li>

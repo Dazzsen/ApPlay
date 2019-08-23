@@ -74,10 +74,15 @@ app.locals.title = 'Express - Generated with IronGenerator';
 const index = require('./routes/index');
 app.use('/', index);
 
+
+//ruta para las noticias
 app.use('/api', require('./routes/notice.route'))
+
+//ruta para autenticación (login y signup)
 app.use('/api', require('./routes/auth.routes'))
 
-// const rolesRoutes = require('./routes/roles.routes');
-// app.use('/roles', rolesRoutes)
+
+//ruta para los juegos
+app.use('/api', require('./routes/game.route'))
 
 module.exports = app;

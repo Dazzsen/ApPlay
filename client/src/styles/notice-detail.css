@@ -1,3 +1,41 @@
+
+h1 {
+  text-align: center;
+}
+
 h4{
+  color:rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+
+h2{
+  margin-bottom: 20px;
   color: blue;
+  font-weight: 400;
+}
+
+.encabezado{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.encabezado p{
+  
+  margin-top: 50px;
+}
+
+img{
+  width: 100%;
+
+  margin: 50px auto;
+}
+
+.review p{
+font-size: 1.3em;
+argin-bottom: 80px;
+argin:50px 90px;
+}
+
+ll{
+  background-color: rgba(18, 50, 231, .05);
 }
