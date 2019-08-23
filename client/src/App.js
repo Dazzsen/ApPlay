@@ -13,7 +13,7 @@ import NoticeList from './components/Notice-list'
 import NavBar from './components/Navbar'
 import Signup from './components/auth/Signup'
 import Login from './components/auth/Login'
-import GameForm from './components/GameForm'
+import GameList from './components/GameList'
 import Crear from './components/Crear'
 import NoticeDetail from './components/Notice-detail';
 
@@ -53,7 +53,7 @@ class App extends Component {
 
           <Switch>
              <CrearProtegido path='/create' user={this.state.loggedInUser} component={Crear} />
-             <GameProtected path='/games' user={this.state.loggedInUser} component={GameForm} />
+             <GameProtected path='/games' user={this.state.loggedInUser} component={GameList} />
              <Route path="/notices" exact render={() => <NoticeList userInSession={this.state.loggedInUser} />} />
              <Route path="/notices/:id" exact component={NoticeDetail} />
           </Switch>
@@ -66,7 +66,7 @@ class App extends Component {
 
           <Switch>
             <CrearProtegido path='/create' user={this.state.loggedInUser} component={Crear} />
-            <GameProtected path='/games' user={this.state.loggedInUser} component={GameForm} />
+            <GameProtected path='/games' user={this.state.loggedInUser} component={GameList} />
             <Route path="/notices" exact render={() => <NoticeList userInSession={this.state.loggedInUser} />} />
             <Route path="/notices/:id" exact component={NoticeDetail} />
             <Route path="/signup" exact render={match => <Signup {...match} setUser={this.setTheUser} />} />

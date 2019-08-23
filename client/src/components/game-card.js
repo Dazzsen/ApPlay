@@ -1,24 +1,27 @@
 import React from 'react'
 //import { Link } from 'react-router-dom'
-
-import '../styles/detail.css'
+import '../styles/game-card.css'
+//import '../styles/game-card.css'
 // import { type } from 'os';
 
 
-const GameCard = ({ imageUrl, name, plataform, price, whattsapp, comentary, _id }) => {
+const GameCard = ({ imageUrl, name, plataform, price, whattsapp, comentary }) => {
 
     return (
-        <div className="col-md-3">
+        
+          <article className="game-card">
              <img src={imageUrl} alt={name} />
-             <h4>{name}</h4>
-             <h5>{plataform}</h5>
-             <p>{price}</p>
-             <p>{whattsapp}</p>
              <hr></hr>
-             <p>{comentary}</p>
-        </div>
+             <h4>{name}</h4>
+             <h5>> {plataform}</h5>
+             <p>{price} €</p>
+             <p>Contacto: {whattsapp}</p>
+             <p className="coment">{comentary}</p>
+          </article>
+        
     )
 }
+
 
 
 export default GameCard

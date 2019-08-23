@@ -11,7 +11,7 @@ router.get('/getGames', (req, res) => {
 
 router.get('/getOneGame/:id', (req, res) => {
     Game.findById(req.params.id)
-      .then(theGame => re-json(theGame))
+      .then(theGame => re.json(theGame))
       .catch(err => console.log('Error', err))
 })
 

@@ -1,0 +1,27 @@
+.game-card {
+  border: 1px solid rgb(7, 7, 7);
+  background: rgba(0, 0, 0, .3);
+  margin:20px auto;
+  padding: 20px;
+}
+
+.game-card h4{
+  color:rgba(66, 66, 255, 0.89);
+}
+
+img{
+  width: 100%;
+}
+
+hr{
+  border: .3px inset rgba(248, 248, 252, .3)
+}
+
+.coment{
+  border: 1px solid rgb(27, 26, 26);
+  padding: 5px;
+  order-radius: 3px;
+  background: rgb(27, 26, 26);
+  bckground: white;
+  clor:black;
+}
