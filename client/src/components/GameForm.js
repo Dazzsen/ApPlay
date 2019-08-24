@@ -35,16 +35,28 @@ class GameForm extends Component {
         .catch(err => console.log('error', err))
   }
 
+  handleFileUpload = e => {
+
+    const uploadData = new FormData();
+    uploadData.append("imageUrl", e.target.files[0]);
+
+    this.service.handleUpload(uploadData)
+        .then(response => this.setState({ imageUrl: response.data.secure_url }))
+        .catch(err => console.log(err))
+}
+
+
+
   render() {
     return(
               <div className="formulario">
                     <h4>Nuevo juego</h4>
 
                     <form onSubmit={this.handleFormSubmit}>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label htmlFor="input-img">URL imagen</label>
                             <input name="imageUrl" type="text" className="form-control" id="input-img" onChange={this.handleChangeInput} />
-                        </div>
+                        </div> */}
 
                         <div className="form-group">
                           <label htmlFor="input-nombre">Nombre del juego</label>
@@ -69,6 +81,11 @@ class GameForm extends Component {
                         <div className="form-group">
                           <label htmlFor="input-comentario">Comentario</label>
                           <input name="comentary" type="text" className="form-control" id="input-comentario" onChange={this.handleChangeInput} />
+                        </div>
+
+                        <div className="form-group">
+                          <label htmlFor="input-img">URL imagen</label>
+                          <input name="imageUrl" type="file" className="form-control" id="input-img" onChange={this.handleFileUpload} />
                         </div>
                         
                         <button type="submit" className="btn btn-dark btn-sm">Crear</button>

@@ -81,6 +81,9 @@ app.use('/api', require('./routes/notice.route'))
 //ruta para autenticación (login y signup)
 app.use('/api', require('./routes/auth.routes'))
 
+//ruta para cloudinary
+app.use('/api', require('./routes/file-upload.routes'))
+
 
 //ruta para los juegos
 app.use('/api', require('./routes/game.route'))

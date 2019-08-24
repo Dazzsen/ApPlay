@@ -41,7 +41,7 @@ class GameList extends Component {
                     <Toast.Header>
                         <strong className="mr-auto">Anuncio subido correctamente</strong>
                     </Toast.Header>
-                    <Toast.Body>Montaña rusa guardada en la Base de Datos</Toast.Body>
+                    <Toast.Body>Anuncio guardado en la Base de Datos</Toast.Body>
                 </Toast>
 
                 <div className="container">
@@ -57,7 +57,7 @@ class GameList extends Component {
 
                     <h1>Juegos de segunda mano</h1>
 
-                    <button className="btn btn-light btn-big" onClick={this.handleModalOpen}>Anuncia tu juego</button>
+                    <button className="btn btn-dark btn-big" onClick={this.handleModalOpen}>Anuncia tu juego</button>
 
                     <div className="row">
                        <div className="col-3">
