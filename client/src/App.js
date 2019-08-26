@@ -55,7 +55,8 @@ class App extends Component {
              <CrearProtegido path='/create' user={this.state.loggedInUser} component={Crear} />
              <GameProtected path='/games' user={this.state.loggedInUser} component={GameList} />
              <Route path="/notices" exact render={() => <NoticeList userInSession={this.state.loggedInUser} />} />
-             <Route path="/notices/:id" exact component={NoticeDetail} />
+             {/* <Route path="/notices/:id" exact component={NoticeDetail} /> */}
+             <Route path="/notices/:id" exact render={(match) => <NoticeDetail userInSession={this.state.loggedInUser} {...match}/>} />
           </Switch>
         </>
       );
@@ -68,12 +69,13 @@ class App extends Component {
             <CrearProtegido path='/create' user={this.state.loggedInUser} component={Crear} />
             <GameProtected path='/games' user={this.state.loggedInUser} component={GameList} />
             <Route path="/notices" exact render={() => <NoticeList userInSession={this.state.loggedInUser} />} />
-            <Route path="/notices/:id" exact component={NoticeDetail} />
+            {/* <Route path="/notices/:id" exact component={NoticeDetail} /> */}
+            <Route path="/notices/:id" exact render={(match) => <NoticeDetail userInSession={this.state.loggedInUser} {...match}/>} />
             <Route path="/signup" exact render={match => <Signup {...match} setUser={this.setTheUser} />} />
             <Route path="/login" exact render={match => <Login {...match} setUser={this.setTheUser} />} />
           </Switch>
         </>
-      );
+      )
     }
   }
 }

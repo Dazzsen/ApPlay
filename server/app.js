@@ -88,4 +88,7 @@ app.use('/api', require('./routes/file-upload.routes'))
 //ruta para los juegos
 app.use('/api', require('./routes/game.route'))
 
+//ruta para los comentarios de las noticias
+app.use('/api', require('./routes/ncomentary.route'))
+
 module.exports = app;

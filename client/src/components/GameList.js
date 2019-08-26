@@ -3,6 +3,8 @@ import Services from '../services/game.service'
 
 import GameCard from './game-card'
 import GameForm from './GameForm'
+import Search from './SearchBar'
+
 
 import { Modal, Toast } from 'react-bootstrap'
 
@@ -30,6 +32,17 @@ class GameList extends Component {
     handleToastOpen = () => this.setState({ showToast: true })
     handleToastClose = () => this.setState({ showToast: false })
     
+
+    searchGame = (word) => {
+        let results = []
+        this.state.find(elm => {
+          if(elm.name.includes(word)) 
+          results.push(elm)
+        })
+        this.setState({
+          game: results
+        })
+      }
 
 
     render() {
@@ -59,8 +72,22 @@ class GameList extends Component {
 
                     <button className="btn btn-dark btn-big" onClick={this.handleModalOpen}>Anuncia tu juego</button>
 
+
+
+
+                    <Search search={this.searchGame}/>
+
+
+
+
                     <div className="row">
                        <div className="col-3">
+
+    
+
+
+
+
                         {this.state.game.map(game => <GameCard key={game._id} {...game} />)}
                        </div>
                     </div>

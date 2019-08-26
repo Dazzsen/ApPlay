@@ -8,7 +8,8 @@ const UserSchema = new Schema({
         type: String,
         enum: ['INVITADO', 'REGISTRADO', 'ADMIN'],
         default: 'INVITADO'
-    }
+    },
+    comentarios: [{type: Schema.Types.ObjectId, ref: "Ncomentary"}]
 }, { timestamps: true })
 
 const User = mongoose.model('User', UserSchema)

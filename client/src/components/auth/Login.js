@@ -24,6 +24,7 @@ class Login extends Component {
         const { username, password } = this.state
         this.authServices.login(username, password)
             .then(theLoggedUser => {
+               
                 this.setState({
                     username: '',
                     password: ''

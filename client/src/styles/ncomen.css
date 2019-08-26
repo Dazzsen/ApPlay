@@ -1,0 +1,12 @@
+.ncomen{
+  border: 1px rgba(43, 47, 61, .25) solid;
+  border-radius: 5px;
+  margin:  60px 20px;
+  padding: 50px 20px;
+  background-color: rgba(27, 23, 23, .7);
+  
+}
+
+.ncomen p{
+  margin-left: 50px;
+}

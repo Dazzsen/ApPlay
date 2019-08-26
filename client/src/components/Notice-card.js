@@ -2,11 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import '../styles/coaster-card.css'
+import NoticeDetail from './Notice-detail';
 //import { type } from 'os';
 
 
 const NoticeCard = ({ title, type, imageUrl, _id }) => {
-
+console.log(_id)
     return (
         <div className="container">
             <Link to={`/notices/${_id}`}>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Services from '../services/notice.service'
 
 import NoticeCard from './Notice-card'
+import '../styles/notices-list.css'
 //import NoticeForm from './Noticeform'
 
 //import Dialog from '@material-ui/core/Dialog';
@@ -37,8 +38,9 @@ class NoticeList extends Component {
 
                     <h1>Prueba para ver noticias</h1>
 
-
+                <div className="noticias">
                    {this.state.notice.map(notice => <NoticeCard key={notice._id} {...notice} />)}
+                </div>
 
                 </div>
             </>
