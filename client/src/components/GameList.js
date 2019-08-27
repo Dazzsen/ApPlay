@@ -13,7 +13,7 @@ class GameList extends Component {
 
     constructor() {
         super()
-        this.state = { game: [], showModal: false, showToast: false }
+        this.state = { game: [], gameCopy:[], showModal: false, showToast: false }
         this.services = new Services()
     }
     
@@ -21,7 +21,7 @@ class GameList extends Component {
     updateList = () => {
         this.services.getGames()
         .then(response => {
-            this.setState({ game: response.data })
+            this.setState({ game: response.data, gameCopy:response.data })
         })
         .catch(err => console.log(err))
     }
@@ -33,19 +33,20 @@ class GameList extends Component {
     
     
     searchGame = (word) => {
-        let results = []
-        this.state.find(elm => {
-            if(elm.name.includes(word)) 
-            results.push(elm)
+        let results = [...this.state.gameCopy]
+        results = results.filter(elm => {
+            return elm.name.toLowerCase().includes(word.toLowerCase())
         })
         this.setState({
-            game: results
+            game: results,
         })
     }
     
     
     render() {
         
+
+        if (this.props.userInSession){
         return (
             <>
 
@@ -88,7 +89,41 @@ class GameList extends Component {
                 </div>
             </>
         )
+        }else{
+
+            return (
+                <>
+    
+    
+                    <div className="container">
+    
+                        
+    
+    
+                        <h1>Juegos de segunda mano</h1>
+    
+                    <div className="busqueda">
+                     
+                        <div>
+                            <Search search={this.searchGame}/>
+                        </div>
+                    </div>
+    
+    
+    
+                        <div className="row justify-content-center">
+                            {this.state.game.map(game => <GameCard key={game._id} {...game} />)}
+                        </div>
+                        
+                    
+                    </div>
+                </>
+            )
+
+
+        }
     }
+
 }
 
 

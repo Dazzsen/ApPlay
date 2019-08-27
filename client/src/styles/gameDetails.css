@@ -1,0 +1,16 @@
+.sto{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.info{
+  border:1px solid rgba(0, 0, 0, .5);
+  adding: 20px;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 255, .15);
+}
+
+.info h4{
+  color:white;
+}
