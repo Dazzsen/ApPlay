@@ -5,7 +5,7 @@ import GameCard from './game-card'
 import GameForm from './GameForm'
 import Search from './SearchBar'
 
-
+import '../styles/busqueda.css'
 import { Modal, Toast } from 'react-bootstrap'
 
 
@@ -16,37 +16,36 @@ class GameList extends Component {
         this.state = { game: [], showModal: false, showToast: false }
         this.services = new Services()
     }
-
+    
     componentDidMount = () => this.updateList()
-
     updateList = () => {
         this.services.getGames()
-            .then(response => {
-              this.setState({ game: response.data })
-            })
-            .catch(err => console.log(err))
+        .then(response => {
+            this.setState({ game: response.data })
+        })
+        .catch(err => console.log(err))
     }
-
+    
     handleModalOpen = () => this.setState({ showModal: true })
     handleModalClose = () => this.setState({ showModal: false })
     handleToastOpen = () => this.setState({ showToast: true })
     handleToastClose = () => this.setState({ showToast: false })
     
-
+    
     searchGame = (word) => {
         let results = []
         this.state.find(elm => {
-          if(elm.name.includes(word)) 
-          results.push(elm)
+            if(elm.name.includes(word)) 
+            results.push(elm)
         })
         this.setState({
-          game: results
+            game: results
         })
-      }
-
-
+    }
+    
+    
     render() {
-
+        
         return (
             <>
 
@@ -70,32 +69,28 @@ class GameList extends Component {
 
                     <h1>Juegos de segunda mano</h1>
 
-                    <button className="btn btn-dark btn-big" onClick={this.handleModalOpen}>Anuncia tu juego</button>
-
-
-
-
-                    <Search search={this.searchGame}/>
-
-
-
-
-                    <div className="row">
-                       <div className="col-3">
-
-    
-
-
-
-
-                        {this.state.game.map(game => <GameCard key={game._id} {...game} />)}
-                       </div>
+                <div className="busqueda">
+                    <div>
+                         <button className="btn btn-light btn-big" onClick={this.handleModalOpen}>Anuncia tu juego</button>
                     </div>
+                    <div>
+                        <Search search={this.searchGame}/>
+                    </div>
+                </div>
+
+
+
+                    <div className="row justify-content-center">
+                        {this.state.game.map(game => <GameCard key={game._id} {...game} />)}
+                    </div>
+                    
+                
                 </div>
             </>
         )
     }
 }
+
 
 
 

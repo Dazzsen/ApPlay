@@ -1,7 +1,13 @@
 .formulario{
   color: black;
+  padding: 30px;
 }
 
 h4{
   color:black;
+}
+
+.botones{
+  display: flex;
+  justify-content: space-evenly;
 }

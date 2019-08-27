@@ -9,7 +9,7 @@ const GameCard = ({ imageUrl, name, plataform, price, whattsapp, comentary }) =>
 
     return (
         
-          <article className="game-card">
+          <article className="game-card col-md-3">
              <img src={imageUrl} alt={name} />
              <hr></hr>
              <h4>{name}</h4>

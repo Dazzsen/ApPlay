@@ -88,8 +88,10 @@ class GameForm extends Component {
                           <input name="imageUrl" type="file" className="form-control" id="input-img" onChange={this.handleFileUpload} />
                         </div>
                         
-                        <button type="submit" className="btn btn-dark btn-sm">Crear</button>
-                        <button className="btn btn-dark btn-sm" onClick={this.props.closeModal}>Cerrar</button>
+                        <div className="botones">
+                          <button type="submit" className="btn btn-dark btn-big">Anunciar</button>
+                          <button className="btn  btn-danger btn-md" onClick={this.props.closeModal}>Cerrar</button>
+                        </div>
 
                     </form>
                 </div>

@@ -34,14 +34,14 @@ class NcomentaryList extends Component {
 
         return (
           <>
+                <div className="text">
+                  <NcomentaryForm userInSession={this.props.userInSession} updateList={this.updateList}></NcomentaryForm>
+                </div>
                 
                 <div className="fondocoments">
                    {this.state.nComentary.map(nComentary => <NcomentaryCard key={nComentary._id} {...nComentary} />)}
                 </div>
                 
-                <div>
-                  <NcomentaryForm userInSession={this.props.userInSession} updateList={this.updateList}></NcomentaryForm>
-                </div>
             </>
         )
       }else{
@@ -49,7 +49,7 @@ class NcomentaryList extends Component {
         return (
           <>
                 
-                <div >
+                <div className="fondocoments">
                    {this.state.nComentary.map(nComentary => <NcomentaryCard key={nComentary._id} {...nComentary} />)}
                 </div>
                 

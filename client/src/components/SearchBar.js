@@ -22,9 +22,9 @@ class Search extends Component {
     render(){
 
       return (
-        <form>
-        <label>Search</label><br></br>
-        <input type="text" name="name" onChange={this.handleChangeInput}></input>
+        <form className="form-group">
+        <label>Search</label>
+        <input type="text" name="name" className="form-control" onChange={this.handleChangeInput}></input>
       </form>
   )
  }

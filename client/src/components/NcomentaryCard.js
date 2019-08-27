@@ -8,6 +8,7 @@ const NcomentaryCard = ({ comentary }) => {
     return (
         
           <article className="ncomen"> 
+            
              <p>{comentary}</p>
              
           </article>

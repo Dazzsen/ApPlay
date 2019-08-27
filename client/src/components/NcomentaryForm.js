@@ -36,7 +36,7 @@ class NcomentaryForm extends Component {
         <form onSubmit={this.handleFormSubmit}>
             <div className="form-group">
                <label htmlFor="input-comentario">Comenta</label>
-               <input name="comentary" type="text" className="form-control" id="input-comentario" onChange={this.handleChangeInput} />
+               <textarea rows="10" cols="40" name="comentary" type="text" className="form-control" id="input-comentario" onChange={this.handleChangeInput} />
             </div>
             <button type="submit" className="btn btn-light btn-sm">Enviar</button>
         </form>
