@@ -23,6 +23,20 @@ app.use((err, req, res, next) => {
 
 let server = http.createServer(app);
 
+
+
+
+
+//ARCHIVO PARA REQUERIR SOCKET   *************************************************
+require("../websockets.js")(server);
+
+
+
+
+
+
+
+
 server.on('error', error => {
   if (error.syscall !== 'listen') { throw error }
 
