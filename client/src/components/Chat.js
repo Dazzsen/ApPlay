@@ -7,9 +7,11 @@ import {InputBox} from './InputBox'
 const socket = io("localhost:3005");
 
 const ChatWrapper = styled.div`
-  border: 1px solid red;
+  
   padding: 10px;
   width: 400px;
+  height: 600px;
+  margin-left: 60px;
 `;
 
 const injectStateArray = withState("messages", "setMessages", []);
@@ -50,3 +52,5 @@ export const Chat = chatInjector(({messages, setMessages})=> (
       />
   </ChatWrapper>
 ))
+
+

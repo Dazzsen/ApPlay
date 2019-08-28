@@ -5,6 +5,10 @@ import '../styles/gameDetails.css'
 import GameList from './GameList'
 import Carousel from 'react-bootstrap/Carousel'
 
+
+import {Chat} from './Chat'
+
+
 class GameDetail extends Component {
 
   constructor(props) {
@@ -40,7 +44,7 @@ class GameDetail extends Component {
              
              </div>
             <div className="col-6">
-              <h1>Hola</h1>
+              <Chat></Chat>
             </div>
 
           </div>
