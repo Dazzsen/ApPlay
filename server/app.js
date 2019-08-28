@@ -91,4 +91,6 @@ app.use('/api', require('./routes/game.route'))
 //ruta para los comentarios de las noticias
 app.use('/api', require('./routes/ncomentary.route'))
 
+app.use((req, res) => {     res.sendFile(__dirname + "/public/index.html");    })
+
 module.exports = app;
