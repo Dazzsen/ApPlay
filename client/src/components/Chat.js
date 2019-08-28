@@ -4,7 +4,7 @@ import { withState, lifecycle, compose } from "recompose";
 import {Message} from './Message'
 import io from "socket.io-client";
 import {InputBox} from './InputBox'
-const socket = io("localhost:3005");
+const socket = io(`${process.env.REACT_APP_URL_SOCKET}`);
 
 const ChatWrapper = styled.div`
   
