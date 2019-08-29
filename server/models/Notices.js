@@ -6,7 +6,7 @@ const noticeSchema = new Schema({
     author: {type: String, required: true },
     plataform: {type: String, required: true },
     genre: {type: String },
-    type: {type: String, required: true },
+    type: {type: String, enum:["Noticia","Analisis"], required: true },
     imageUrl: { type: String, required: true },
     review: { type: String, required: true },
     note: { type: Number },
