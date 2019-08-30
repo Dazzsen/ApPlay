@@ -10,3 +10,13 @@
 .text{
   padding:0 60px;
 }
+
+.fondocoments h3{
+  color:red;
+  text-align: center;
+  font-weight: 400;
+}
+
+.fondocoments a{
+  text-decoration: none;
+}

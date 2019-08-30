@@ -43,6 +43,7 @@ class GameForm extends Component {
     this.service.handleUpload(uploadData)
         .then(response => this.setState({ imageUrl: response.data.secure_url }))
         .catch(err => console.log(err))
+        
 }
 
 

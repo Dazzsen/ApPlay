@@ -1,4 +1,19 @@
 .busqueda{
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 180px;
+}
+
+.juegos{
+  background-image: url("../img/juegofondo.jpg") ;
+  background-repeat: no-repeat;
+}
+
+.titulo{
+  color:rgb(124, 122, 122);
+  text-align: center;
+  font-size: 3em;
+  font-weight: 100;
+  margin-bottom: 70px;
+  text-align: left;
 }

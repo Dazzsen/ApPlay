@@ -23,7 +23,7 @@ class Search extends Component {
 
       return (
         <form className="form-group">
-        <label>Search</label>
+      
         <input type="text" name="name" className="form-control" onChange={this.handleChangeInput}></input>
       </form>
   )

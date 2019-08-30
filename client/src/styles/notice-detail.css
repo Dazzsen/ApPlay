@@ -26,14 +26,15 @@ h2{
 
 img{
   width: 100%;
-
-  margin: 50px auto;
+  padding:0 0px;
+  margin: 0px auto;
 }
 
 .review p{
 font-size: 1.3em;
-argin-bottom: 80px;
+margin-bottom: 100px;
 argin:50px 90px;
+padding: 80px;
 }
 
 ll{

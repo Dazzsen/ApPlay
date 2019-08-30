@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import AuthServices from '../services/auth.services'
 //import Crear from './Crear'
 
+import '../img/logoap.png'
 
 
 class NavBar extends Component {
@@ -43,9 +44,11 @@ console.log(this.state.visible)
         if (this.props.userInSession) {
             return (
                 <>
+                
                     <div className="toggle-menu" onClick={this.toggleMenu}>&equiv; </div>
                     <header className="menu">
-                        <h1>ApPlay</h1>
+                    
+                        <h1><img src="../img/logoap.png" /> ApPlay</h1> 
                         <nav>
                             {this.props.role === "ADMIN" ? <ul> 
 
@@ -74,7 +77,7 @@ console.log(this.state.visible)
                 <>
                     <div className="toggle-menu" onClick={this.toggleMenu}>&equiv; </div>
                     <header className="menu">
-                        <h1>ApPlay</h1>
+                        <h1><img src="../img/logoap.png" />ApPlay</h1>
                         <nav>
                             <ul>
                                 <li><Link to="/">Inicio</Link></li>

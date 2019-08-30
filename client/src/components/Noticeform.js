@@ -49,13 +49,13 @@ class NoticeForm extends Component {
         return(
           <>
                 <h4>Nueva noticia</h4>
-
+{/* ///////////////////////////////////////////////////////////////////////////////// */}
                 <hr></hr>
 
                 <form onSubmit={this.handleFormSubmit}>
                     <div className="form-group">
-                        <label htmlFor="input-titulo">Titulo</label>
-                        <input name="title" type="text" className="form-control" id="input-titulo" onChange={this.handleChangeInput} />
+                        <label htmlFor="input-type">Titulo</label>
+                        <input name="title" type="text" className="form-control" id="input-type" onChange={this.handleChangeInput} />
                     </div>
 
                     <div className="form-group">
@@ -73,9 +73,19 @@ class NoticeForm extends Component {
                         <input name="genre" type="text" className="form-control" id="input-genero" onChange={this.handleChangeInput} />
                     </div>
 
+  
+                     {/* <div className="form-group">
+                         <label htmlFor="input-genero">Tipo</label>
+                         <input name="type" type="text" className="form-control" id="input-genero" onChange={this.handleChangeInput} />
+                     </div> */}
+
                     <div className="form-group">
-                        <label htmlFor="input-tipo">Tipo</label>
-                        <input name="type" type="text" className="form-control" id="input-tipo" onChange={this.handleChangeInput} />
+                        <label htmlFor="type">Tipo</label>
+                        <select name="type" className="form-control" id="input-tipo"  onChange={this.handleChangeInput} value={this.state.type}>
+                            <option></option>
+                            <option value="Noticia">Noticia</option>
+                            <option value="Analisis">Análisis</option>
+                        </select>
                     </div>
 
                     <div className="form-group">

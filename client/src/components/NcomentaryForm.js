@@ -25,7 +25,8 @@ class NcomentaryForm extends Component {
             .then(x => {
               console.log(x)
               this.props.updateList()
-              // window.location.assign('/notices')
+              this.setState({comentary: ""})
+              // window.location.assign('/notices/:id')
             })
             .catch(err => console.log('error', err))
     }
@@ -36,7 +37,7 @@ class NcomentaryForm extends Component {
         <form onSubmit={this.handleFormSubmit}>
             <div className="form-group">
                <label htmlFor="input-comentario">Comenta</label>
-               <textarea rows="10" cols="40" name="comentary" type="text" className="form-control" id="input-comentario" onChange={this.handleChangeInput} />
+               <textarea value={this.state.comentary} rows="10" cols="40" name="comentary" type="text" className="form-control" id="input-comentario" onChange={this.handleChangeInput} />
             </div>
             <button type="submit" className="btn btn-light btn-sm">Enviar</button>
         </form>

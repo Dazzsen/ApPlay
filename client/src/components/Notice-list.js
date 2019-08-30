@@ -4,8 +4,9 @@ import Services from '../services/notice.service'
 import NoticeCard from './Notice-card'
 import '../styles/notices-list.css'
 //import NoticeForm from './Noticeform'
-
+// import '../img/ps4.png'
 //import Dialog from '@material-ui/core/Dialog';
+import MyComponent from './MyComponent'
 
 
 class NoticeList extends Component {
@@ -34,15 +35,20 @@ class NoticeList extends Component {
 
         return (
             <>
-                <div className="container">
+            <div className="not">
 
-                    <h1>Prueba para ver noticias</h1>
+                <div className="container">
+           
+                
+                
+                    <h2 className="noticiatit">Noticias</h2>
 
                 <div className="noticias">
                    {this.state.notice.map(notice => <NoticeCard key={notice._id} {...notice} />)}
                 </div>
 
                 </div>
+            </div>
             </>
         )
     }

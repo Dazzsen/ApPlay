@@ -1,5 +1,5 @@
 .coaster-card {
-  order: 1px solid grey;
+  border: 1px solid rgba(128, 128, 128, .2);
   margin-bottom: 20px;
   color: white;
   background-color: rgb(255, 254, 254, .11);
@@ -9,6 +9,7 @@
 
 .coaster-card img {
   width: 100%;
+  height: 100%;
   margin:0;
   object-fit: cover;
 }
@@ -26,11 +27,13 @@
 
 .coaster-card p {
   font-size: 1.2em;
-  color:rgb(253, 253, 255, .5);
+  color:rgb(166, 166, 253);
   margin-top: 20px;
   margin-left: 30px;
 }
 
 
-
+.notice a{
+  text-decoration: none;
+}
 

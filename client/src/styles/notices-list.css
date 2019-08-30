@@ -1,3 +1,24 @@
 .noticias{
   margin-bottom: 80px;
+  
+}
+
+.not{
+  background-image: url("../img/consolas2.png") ;
+  background-repeat: no-repeat;
+}
+
+.logo{
+  width: 25%;
+  margin-top:60px;
+  
+}
+
+.noticiatit{
+  text-align: left;
+  font-size: 5em;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 100;
+  margin-top:150px;
+  margin-bottom: 150px;
 }

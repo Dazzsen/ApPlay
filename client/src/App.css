@@ -4,7 +4,9 @@ body {
   color: white;
   background-color: black;
   font-size: .95em;
-  background-image: url("./img/fondo.jpg");
+  background-image: url("./img/fondo2.jpg") ;
+  
+
 }
 
 h1, h2, h3, h4, h5 {
@@ -86,7 +88,7 @@ ul {
   display: block;
   padding: 10px 0;
   color: white;
-  margin-right: 20px;
+  margin-right: 30px;
   
 }
 
@@ -97,7 +99,7 @@ ul {
 
   .menu {
   width: 100vw;
-  height: 50px;
+  height: 60px;
   transform: translateX(0);
   transition: none;
   }
@@ -108,13 +110,14 @@ ul {
 
   .menu img {
   margin: 8px;
-  width: 100px;
+  width: 50px;
   float: left;
   border: none;
   }
 
   .menu ul {
   float: right;
+  margin-right: 50px;
   }
 
   .menu li {
@@ -128,7 +131,8 @@ ul {
   font-weight: 300;
   float: left;
   line-height: 50px;
-  margin-left: 10px;
+  margin-left: 20px;
+  margin-top: 5px;
 }
 }
 

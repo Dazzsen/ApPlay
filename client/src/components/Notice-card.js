@@ -9,7 +9,7 @@ import NoticeDetail from './Notice-detail';
 const NoticeCard = ({ title, type, imageUrl, _id }) => {
 console.log(_id)
     return (
-        <div className="container">
+        <div className="container notice">
             <Link to={`/notices/${_id}`}>
                 <article className="row coaster-card">
                 <div className="col-4">

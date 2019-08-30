@@ -49,6 +49,7 @@ class GameList extends Component {
         if (this.props.userInSession){
         return (
             <>
+            <div className="juegos">
 
                 <Toast onClose={this.handleToastClose} show={this.state.showToast} delay={5000} autohide style={{ position: 'fixed', bottom: 0, right: 10, zIndex: 9999 }}>
                     <Toast.Header>
@@ -67,9 +68,6 @@ class GameList extends Component {
 
                     </Modal>
 
-
-                    <h1>Juegos de segunda mano</h1>
-
                 <div className="busqueda">
                     <div>
                          <button className="btn btn-light btn-big" onClick={this.handleModalOpen}>Anuncia tu juego</button>
@@ -79,6 +77,9 @@ class GameList extends Component {
                     </div>
                 </div>
 
+                    <h2 className="titulo">Juegos de segunda mano</h2>
+
+
 
 
                     <div className="row justify-content-center">
@@ -87,27 +88,31 @@ class GameList extends Component {
                     
                 
                 </div>
+        </div>
             </>
         )
         }else{
-
+            
             return (
+
                 <>
+                <div className="juegos">
     
+                    
     
                     <div className="container">
     
                         
     
-    
-                        <h1>Juegos de segunda mano</h1>
-    
                     <div className="busqueda">
-                     
+                        
                         <div>
                             <Search search={this.searchGame}/>
                         </div>
                     </div>
+    
+                        <h2 className="titulo">Juegos de segunda mano</h2>
+    
     
     
     
@@ -117,6 +122,7 @@ class GameList extends Component {
                         
                     
                     </div>
+            </div>
                 </>
             )
 

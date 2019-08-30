@@ -1,8 +1,8 @@
 .game-card {
   border: 1px solid rgb(7, 7, 7);
-  background-color: rgba(0, 0, 255, .15);
+  background-color: black;
   margin:30px 40px;
-  padding: 20px;
+  padding:0;
   color:white;
 }
 
@@ -20,7 +20,6 @@ p{
   margin:0;
   padding: 0;
   object-fit: cover;
-  
 }
 
 hr{
@@ -34,4 +33,12 @@ hr{
   background: rgb(27, 26, 26);
   bckground: white;
   clor:black;
+}
+
+.espacio{
+  padding: 30px;
+}
+
+.game-card a {
+  text-decoration: none;
 }

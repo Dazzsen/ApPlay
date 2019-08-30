@@ -6,11 +6,20 @@
 
 .info{
   border:1px solid rgba(0, 0, 0, .5);
-  adding: 20px;
+  padding: 20px;
   margin-bottom: 40px;
   background-color: rgba(0, 0, 255, .15);
 }
 
 .info h4{
   color:white;
+  text-align: left;
+}
+
+.info img{
+  width: 100%;
+  margin:0;
+  padding: 0;
+  object-fit: cover;
+  margin-bottom: 40px;
 }
