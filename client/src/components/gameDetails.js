@@ -28,19 +28,23 @@ class GameDetail extends Component {
     console.log(this.props)
       return (
         <>
-          <div className="container ">
+          <div className="container todo">
 
-             <h1>ApPlay</h1>
+             <h1>{this.state.game.name}</h1>
              <div className=" esto row">
 
               <div className="col-6 info">
                <img src={this.state.game.imageUrl} alt={this.state.game.name}/>
                 <div className="info2">
                   <h2> {this.state.game.name} </h2>
+                  <p>PLataforma:</p>
                   <h3> {this.state.game.plataform} </h3>
+                  <p>Precio:</p>
                   <h4> {this.state.game.price} € </h4>
+                  <p>Contacto:</p>
                   <h5> {this.state.game.whattsapp} </h5>
-                  <p> {this.state.game.comentary} </p>
+                  <p>Comentario:</p>
+                  <h5> {this.state.game.comentary} </h5>
                 </div>
              </div>
             <div className="col-6">

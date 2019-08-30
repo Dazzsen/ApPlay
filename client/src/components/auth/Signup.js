@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import AuthServices from '../../services/auth.services'
 
+import '../../styles/gameDetails.css'
+
 class Signup extends Component {
 
     constructor(props){
       super(props)
       this.state = {
         username: '',
-        password: ''
+        password: '',
+        err:''
       }
       this.authservices = new AuthServices()
     }
@@ -24,7 +27,8 @@ class Signup extends Component {
           .then(theNewUser => {
             this.setState({
               username:'',
-              password: ''
+              password: '',
+              err:''
             })
             this.props.setUser(theNewUser)
             this.props.history.push('/notices')
@@ -35,7 +39,7 @@ class Signup extends Component {
     render() {
 
       return(
-        <div className="container">
+        <div className="container log">
             <h1>Registro de usuario</h1>
             <form onSubmit={this.handleFormSubmit}>
             Usuario: <br/> <input name="username" className="form" type="text" value={this.state.username} onChange={this.handleInputChange} /> <br></br>
@@ -44,6 +48,7 @@ class Signup extends Component {
             <br></br>
             <input type="submit" className="btn btn-outline-light" value="Registrar" />
             </form>
+            {this.state.err && <p className="login.error">{this.state.err}</p>}
         </div>
       )
     }

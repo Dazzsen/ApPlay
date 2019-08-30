@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import AuthServices from '../../services/auth.services'
 
-
+import '../../styles/logi.css'
+///////////////////////////////////////////////////////////////////////////////////////
 
 class Login extends Component {
 
@@ -9,7 +10,8 @@ class Login extends Component {
         super(props)
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            err:''
         }
         this.authServices = new AuthServices()
     }
@@ -27,19 +29,25 @@ class Login extends Component {
                
                 this.setState({
                     username: '',
-                    password: ''
+                    password: '',
+                    err:''
                 })
                 this.props.setUser(theLoggedUser)
                 this.props.history.push('/notices')
             })
-            .catch(err => console.log(err.response.data.message))
+            .catch(err => {
+                let msg=err.response.data.message
+                this.setState({err:msg})
+            })
     }
 
     render() {
 
         return (
-            <div className="inicio">
+            
 
+            
+            
             <div className="container login">
                 <h1>Inicio de sesión de usuario</h1>
                 <form onSubmit={this.handleFormSubmit}>
@@ -48,9 +56,10 @@ class Login extends Component {
                     <br/><br/>
                     <input type="submit" value="Iniciar sesión" className="btn btn-outline-light"/>
                 </form>
+                {this.state.err && <p className="login.error">{this.state.err}</p>}
             </div>
 
-            </div>
+         
         )
     }
 }
